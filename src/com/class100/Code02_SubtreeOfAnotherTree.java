@@ -26,7 +26,15 @@ public class Code02_SubtreeOfAnotherTree {
      *     }
      * }
      */
+    public class TreeNode{
+        int val ;
+        TreeNode left ;
+        TreeNode right ;
 
+        TreeNode(int x ) {
+            val = x ;
+        }
+    }
     // 方法1 : 暴力递归
     public static  boolean isSubtree(TreeNode t1 , TreeNode t2) {
         if (t1 != null && t2 != null) {

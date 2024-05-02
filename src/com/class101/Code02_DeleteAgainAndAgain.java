@@ -31,8 +31,10 @@ public class Code02_DeleteAgainAndAgain {
         s2 = in.readLine().toCharArray();
         compute();
         for (int i = 0; i < size; i++) {
-            out.print(s1[stack1[i]]);
+            out.print(s1[stack1[i]]);  // 把最后栈里面剩余的元素打印出来,即是最终留存下来的字符
         }
+
+
         out.println();
         out.flush();
         out.close();
@@ -46,7 +48,6 @@ public class Code02_DeleteAgainAndAgain {
         while (x < n) {
             // x位置上的字符与y位置上的字符对应上
             if (s1[x] == s2[y]) {
-
                 stack1[size] = x;
                 stack2[size] = y;
                 size++;
@@ -61,16 +62,19 @@ public class Code02_DeleteAgainAndAgain {
                 y = next[y];
             }
             if (y == m) {
-                // 相当于栈直接弹出了m条记录
+                // 相当于栈直接弹出了m条记录 (弹出的逻辑)
                 size -= m;
                 y = size > 0 ? (stack2[size - 1] + 1) : 0;
             }
         }
     }
 
+    // 建立next数组
     public static void nextArray(int m) {
         next[0] = -1;
         next[1] = 0;
+        // i:当前要 求的 next值的位置
+        // cn : 要和前一个字符比对的下标
         int i = 2, cn = 0;
         while (i < m) {
             if (s2[i - 1] == s2[cn]) {

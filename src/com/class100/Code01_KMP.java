@@ -34,7 +34,7 @@ public class Code01_KMP {
         if (m == 1 ) {
             return new int[] {-1};
         }
-        //  创立next数组
+        //  建立next数组
         int[] next = new int[m];
         next[0] = -1 ;
         next[1] = 0 ;

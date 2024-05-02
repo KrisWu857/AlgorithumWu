@@ -14,8 +14,8 @@ import java.util.Arrays;
 // 返回需要移除的障碍物的最小数目
 // 测试链接 : https://leetcode.cn/problems/minimum-obstacle-removal-to-reach-corner/
 
-public class Code03_MinimumObstacleRemovalToReachCorner {
 
+public class Code03_MinimumObstacleRemovalToReachCorner {
     public static int minimumObstacles(int[][] grid) {
         int[] move = {-1, 0, 1, 0, -1};
         int m = grid.length;
@@ -45,7 +45,6 @@ public class Code03_MinimumObstacleRemovalToReachCorner {
                 if (nx >= 0 && nx < m && ny >= 0 && ny < n &&  // 不越界
                         distance[x][y] + grid[nx][ny] < distance[nx][ny]) {// 也即是 distance[x] + weight < distance[y]
                     distance[nx][ny] = distance[x][y] + grid[nx][ny];
-
                     // 如果权重为0的话,就从头部进入队列
                     if (grid[nx][ny] == 0) {
                         deque.addFirst(new int[]{nx, ny});
