@@ -15,6 +15,7 @@ public class code03_CoupleHoldingHand {
         for (int i = 0 ;i < n ; i += 2 ) {
 
 
+
             // ? ? ? ? ? ?   上面的人属于什么情侣编号?
             // 0 1 2 3 4 5
             union(row[i] / 2 ,row[i + 1 ] / 2 ); // i位置的人除2 是他的情侣编号

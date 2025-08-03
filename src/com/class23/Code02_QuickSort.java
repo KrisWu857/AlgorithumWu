@@ -29,6 +29,7 @@ public class Code02_QuickSort {
         for (int i = l; i <=r; i++) {
             if (arr[i] <= x) {
                 swap(arr, a, i);
+                // 确保划分完成之后<=x区域的最后一个数字是x
                 if (arr[i] == x ) {
                     xi = a;
                 }
@@ -79,5 +80,4 @@ public class Code02_QuickSort {
             }
         }
     }
-
 }

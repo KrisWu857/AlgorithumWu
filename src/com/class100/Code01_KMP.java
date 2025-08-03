@@ -9,7 +9,7 @@ public class Code01_KMP {
     //    return s1.indexOf(s2);
         return kmp(s1.toCharArray() , s2.toCharArray()) ;
     }
-
+    
     public static int kmp(char[] s1, char[] s2) {
         // s1中当前比对的位置是x
         // s2中当前比对的位置是y

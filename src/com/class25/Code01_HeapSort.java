@@ -57,7 +57,6 @@ public class Code01_HeapSort {
             if (best == i) { // 如果发现最强的孩子等于自己的话,就不需要往下对调
                 break;
             }
-
             swap(best , i );
             i = best ;
             l = i * 2 + 1 ;
